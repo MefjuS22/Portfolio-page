@@ -8,11 +8,11 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <Router basename='/portfolio-page'>
+    <Router basename='/'>
       <GlobalStyle/>
       <Navbar/>
       <Routes>
-        <Route path="portfolio-page" element = {<Home/>}/>
+        <Route path="/" element = {<Home/>}/>
         <Route path="Contact" element = {<Contact/>}/>
       </Routes>
     </Router>
