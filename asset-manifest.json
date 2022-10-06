@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.js": "/portfolio-page/static/js/main.6faf2304.js",
+    "main.js": "/portfolio-page/static/js/main.462cd047.js",
     "static/media/Video.mp4": "/portfolio-page/static/media/Video.22acab75d452957cc30b.mp4",
+    "static/media/portfolio-page.png": "/portfolio-page/static/media/portfolio-page.03be6a524df2833221bd.png",
+    "static/media/cats-list.png": "/portfolio-page/static/media/cats-list.3ab76dc605a74f1d2bed.png",
+    "static/media/education.png": "/portfolio-page/static/media/education.5f9c5c6449adf5161a38.png",
     "index.html": "/portfolio-page/index.html",
-    "main.6faf2304.js.map": "/portfolio-page/static/js/main.6faf2304.js.map"
+    "main.462cd047.js.map": "/portfolio-page/static/js/main.462cd047.js.map"
   },
   "entrypoints": [
-    "static/js/main.6faf2304.js"
+    "static/js/main.462cd047.js"
   ]
 }
