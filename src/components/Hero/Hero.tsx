@@ -8,12 +8,11 @@ import {
   ButtonWrapper,
   HeroButton,
 } from "./HeroStyles";
-import video from "./Video.mp4";
 
 const Hero = () => {
   return (
     <HeroSection>
-      <HeroVideo src={video} type="video/mp4" autoPlay muted></HeroVideo>
+      <HeroVideo src={require("./Video.mp4")} autoPlay muted></HeroVideo>
       <Container>
         <MainHeading>
           My name is Mateusz and I am a Front-End Developer

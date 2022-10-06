@@ -2,26 +2,26 @@ import styled, {createGlobalStyle} from "styled-components";
 
 
 interface Props{
-    inverse: string;
-    margin: string;
-    mb: string;
-    mt: string;
-    width: string;
-    size: string;
-    weight: string;
-    spacing: string;
-    padding:string;
-    position: string;
-    minWidth: string;
-    maxWidth: string;
-    height: string;
-    minHeight: string;
-    maxHeight: string;
-    smPadding: string;
-    justify: string;
-    align: string;
-    gap: string;
-    wrap: string;
+    inverse?: boolean;
+    margin?: string;
+    mb?: string;
+    mt?: string;
+    width?: string;
+    size?: string;
+    weight?: string;
+    spacing?: string;
+    padding?:string;
+    position?: string;
+    minWidth?: string;
+    maxWidth?: string;
+    height?: string;
+    minHeight?: string;
+    maxHeight?: string;
+    smPadding?: string;
+    justify?: string;
+    align?: string;
+    gap?: string;
+    wrap?: string;
 }
 
 const GlobalStyle = createGlobalStyle`
