@@ -7,6 +7,12 @@ export const heroOne = {
 	headline: "About Me",
 	description: 'I am 20 year old Front-End Developer working in React with Typescript since march 2022',
 	buttonLabel: 'Download CV',
+    onClick: () => {
+        let alink = document.createElement('a');
+                alink.href = './Mateusz_Smyda_CV.pdf';
+                alink.download = 'Mateusz_Smyda_CV.pdf';
+                alink.click();
+    },
 	imgStart: 'start',
 	img: '../../public/assets/svg/education.svg',
 	start: 'true',
@@ -20,11 +26,11 @@ export const heroTwo = {
 	},
 	headline: 'I study Computer Science at WSB-NLU University since 2022',
 	description: '',
-	buttonLabel: 'View Project',
+	// buttonLabel: 'View Project',
 
 	linkTo: '/more',
 	imgStart: 'start',
-	img: '../../public/assets/svg/education.svg',
+	img: require('../components/Content/education.png'),
 	start: 'true',
 };
 
@@ -38,9 +44,10 @@ export const heroThree = {
 	description:
 		"Below you can check some of the projects I've been working on or if you want you can check source code of this website!",
 	buttonLabel: 'View Code',
-
-	linkTo: '/#/contact',
+    onClick: ()=>{
+        window.open('https://github.com/MefjuS22/portfolio-page/tree/master')
+      },
 	imgStart: '',
-	img: require('../components/Content/education.png'),
+	img: require('../components/Content/projects.png'),
 	start: 'true',
 };

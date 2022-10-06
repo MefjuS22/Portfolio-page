@@ -31,6 +31,7 @@ interface types{
   inverse?: boolean,
   reverse?: boolean,
   linkTo?: string,
+  onClick?: any,
 }
 function Content({
   topLine,
@@ -41,7 +42,7 @@ function Content({
   alt,
   inverse,
   reverse,
-  linkTo,
+  onClick,
 }: types) {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.2 });
@@ -83,17 +84,16 @@ function Content({
               >
                 {description}
               </Subtitle>
-              <ContentButton
+              {buttonLabel ? <ContentButton
                 initial={initial}
                 transition={{ delay: 1, duration: 0.6 }}
                 animate={animation}
                 inverse={inverse}
-                onClick={()=>{
-                  window.open(linkTo)
-                }}
+                onClick={onClick}
               >
                 {buttonLabel}
-              </ContentButton>
+              </ContentButton> : <></>}
+              
             </TextWrapper>
           </ContentColumn>
           <ContentColumn

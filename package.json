@@ -4,6 +4,7 @@
   "private": false,
   "homepage": "https://mefjus22.github.io/portfolio-page/",
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -51,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-slick": "^0.23.10",
     "@types/styled-components": "^5.1.26",
     "gh-pages": "^4.0.0"
   }
