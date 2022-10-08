@@ -21,7 +21,7 @@ function Carousel() {
           My Projects
         </Heading>
         <ButtonContainer>
-          <IconContext.Provider value={{ size: "3rem", color: "#1d609c" }}>
+          <IconContext.Provider value={{ size: "3rem", color: "#003554" }}>
             <MdArrowBackIos onClick={sliderRef?.slickPrev} />
             <MdArrowForwardIos onClick={sliderRef?.slickNext} />
           </IconContext.Provider>

@@ -91,7 +91,7 @@ export const Heading = styled(motion.h2)<Props>`
 	font-size: 3rem;
 	line-height: 1.1;
 	font-weight: 600;
-	color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
+	color: ${({ inverse }) => (inverse ? '#003554' : 'white')};
 
 	@media screen and (max-width: 768px) {
 		text-align: center;
@@ -115,20 +115,20 @@ export const ContentButton = styled(motion.button)<Props>`
 	text-transform: uppercase;
 	cursor: pointer;
 	background: none;
-	color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
+	color: ${({ inverse }) => (inverse ? '#003554' : 'white')};
 
 	border-radius: 4px;
 	white-space: nowrap;
 	padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
 	font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
 	outline: none;
-	border: 2px solid ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
+	border: 2px solid ${({ inverse }) => (inverse ? '#003554' : 'white')};
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 
 	&:before {
-		background: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
+		background: ${({ inverse }) => (inverse ? '#003554' : 'white')};
 		content: '';
 		position: absolute;
 		top: 50%;

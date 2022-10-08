@@ -103,9 +103,10 @@ function Content({
           >
             <ImgWrapper>
               <Img
+                
                 src={img}
                 alt={alt}
-                whileHover={{ rotate: 2, scale: 1.02 }}
+                whileHover={{ rotate: 3, scale: 1.02 }}
                 transition={{ duration: 0.5 }}
               />
             </ImgWrapper>

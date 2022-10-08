@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
-import { CgMenuRight } from "react-icons/cg";
 import {
   NavbarContainer,
   Nav,
-  NavIcon,
   MobileIcon,
   NavMenu,
   NavLinks,
   NavItem,
-  NavLogo,
 } from "./NavbarStyles";
 import { data } from "../../data/NavbarData";
 
@@ -33,24 +30,30 @@ function Navbar() {
     });
   };
 
-  const closeMobileMenu = (to: string, id: any) => {
+  const closeMobileMenu = (to: string, id?: string) => {
+    
     if (id && location.pathname === "/") {
       scrollTo(id);
     }
     navigate(to);
+    setShow(show => false)
   };
+
 
   return (
     <IconContext.Provider value={{ color: "#fff" }}>
       <Nav>
         <NavbarContainer>
           <MobileIcon onClick={handleClick}>
-            {show ? <FaTimes /> : <CgMenuRight />}
+            {show ? <FaTimes /> : <MdMenu />}
           </MobileIcon>
           <NavMenu show={show}>
             {data.map((el, index) => (
               <NavItem key={index}>
-                <NavLinks onClick={() => closeMobileMenu(el.to, el.id)}>
+                <NavLinks onClick={() => {
+                  
+                  closeMobileMenu(el.to, el.id)
+                  }}>
                   {el.text}
                 </NavLinks>
               </NavItem>

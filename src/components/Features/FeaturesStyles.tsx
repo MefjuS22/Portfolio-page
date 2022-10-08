@@ -42,6 +42,7 @@ export const FeatureColumn = styled(motion.div)`
 `;
 
 export const FeatureImageWrapper = styled.div`
+	
 	margin-bottom: 1rem;
 	border-radius: 50%;
 	border: 2px solid #000;

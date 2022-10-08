@@ -1,3 +1,5 @@
+
+
 export const heroOne = {
 	reverse: true,
 	inverse: true,
@@ -5,7 +7,7 @@ export const heroOne = {
 		text: '',
 	},
 	headline: "About Me",
-	description: 'I am 20 year old Front-End Developer working in React with Typescript since march 2022',
+	description: 'I am 20 year old Front-End Developer working in React with Typescript with ambition to become a Full-Stack Developer :)',
 	buttonLabel: 'Download CV',
     onClick: () => {
         let alink = document.createElement('a');
@@ -14,7 +16,7 @@ export const heroOne = {
                 alink.click();
     },
 	imgStart: 'start',
-	img: '../../public/assets/svg/education.svg',
+	img: require('../components/Content/programmer.png'),
 	start: 'true',
 };
 
@@ -26,11 +28,8 @@ export const heroTwo = {
 	},
 	headline: 'I study Computer Science at WSB-NLU University since 2022',
 	description: '',
-	// buttonLabel: 'View Project',
-
-	linkTo: '/more',
 	imgStart: 'start',
-	img: require('../components/Content/education.png'),
+	img: require('../components/Content/school.png'),
 	start: 'true',
 };
 
@@ -48,6 +47,6 @@ export const heroThree = {
         window.open('https://github.com/MefjuS22/portfolio-page/tree/master')
       },
 	imgStart: '',
-	img: require('../components/Content/projects.png'),
+	img: require('../components/Content/clipboard.png'),
 	start: 'true',
 };

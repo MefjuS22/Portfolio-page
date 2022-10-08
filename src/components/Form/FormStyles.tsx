@@ -10,7 +10,7 @@ interface Props{
 
 export const FormSection = styled.div<Props>`	
 	padding: 160px 0;
-	background: #101522;
+	background: #006494;
 `;
 
 export const FormTitle = styled.h1`

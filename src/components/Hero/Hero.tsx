@@ -24,7 +24,7 @@ const Hero = () => {
           <Link to="contact">
             <Button>Contact me!</Button>
           </Link>
-          <HeroButton>Learn more</HeroButton>
+          <HeroButton onClick={()=> window.scrollTo({top: window.innerHeight, behavior:"smooth"})}>Learn more</HeroButton>
         </ButtonWrapper>
       </Container>
     </HeroSection>

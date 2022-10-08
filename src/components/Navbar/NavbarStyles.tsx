@@ -14,11 +14,11 @@ export const Nav = styled.nav`
 	justify-content: center;
 	align-items: center;
 	font-size: 1.2rem;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	z-index: 50;
 	width: 100%;
-
+	background: #006494;
 	transition: background-color 0.3s ease-in;
 `;
 
@@ -26,7 +26,7 @@ export const NavbarContainer = styled(Container)`
 	display: flex;
 	justify-content: start;
 	height: 80px;
-
+	
 	${Container}
 `;
 
@@ -80,7 +80,7 @@ export const NavMenu = styled.ul<Props>`
 		visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
 		transform: translateY(${({ show }) => (show ? '0' : '-10px')});
 		transition: opacity 0.5s ease;
-		background-color: #071c2f;
+		background-color: #006494;
 	}
 
 	> li:first-child {
