@@ -20,7 +20,7 @@ export const ImageWrapper = styled.div`
     align-items: center;
     border-radius: 10px;
     outline: none;
-    height: 430px;
+    height: 450px;
     @media screen and (min-width: 440px){
         border: 1px solid #bebebe
         
@@ -42,7 +42,7 @@ export const ButtonContainer = styled(Row)`
 
 export const ReviewSlider = styled(Slider)`
 	width: 100%;
-    
+    /* height: 500px; */
 	.slick-track {
 		display: flex;
 		padding: 30px;

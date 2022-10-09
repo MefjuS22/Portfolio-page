@@ -3,10 +3,12 @@ import { Container } from '../../globalStyles';
 import { Link } from 'react-router-dom';
 
 interface Props{
-    show: boolean;
+    show?: boolean;
+	scroll?: boolean;
 }
 
-export const Nav = styled.nav`
+export const Nav = styled.nav<Props>`
+	
 	background: transparent;
 	margin-bottom: -80px;
 	height: 80px;
@@ -18,7 +20,8 @@ export const Nav = styled.nav`
 	top: 0;
 	z-index: 50;
 	width: 100%;
-	background: #006494;
+	background-color: ${({ scroll }) => (scroll ? '#333333' : '#ffffff0')};
+	box-shadow: ${({ scroll }) => (scroll ? '0 2px 4px 0 rgba(0, 0, 0, 0.2)' : '#ffffff0')};
 	transition: background-color 0.3s ease-in;
 `;
 
@@ -80,7 +83,7 @@ export const NavMenu = styled.ul<Props>`
 		visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
 		transform: translateY(${({ show }) => (show ? '0' : '-10px')});
 		transition: opacity 0.5s ease;
-		background-color: #006494;
+		background-color: #333333;
 	}
 
 	> li:first-child {
@@ -91,7 +94,9 @@ export const NavMenu = styled.ul<Props>`
 export const NavItem = styled.li`
 	height: 80px;
 	cursor: pointer;
-
+	a{
+		color:blue;
+	}
 	@media screen and (max-width: 960px) {
 		width: 100%;
 

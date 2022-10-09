@@ -8,6 +8,7 @@ export const FooterWrapper = styled.div`
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
+	
 `;
 
 

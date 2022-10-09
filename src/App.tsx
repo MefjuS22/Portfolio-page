@@ -3,18 +3,18 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar/Navbar';
 import GlobalStyle from './globalStyles';
 import Contact from './pages/Contact';
-import {HashRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 
 
 function App() {
   return ( 
-  <Router basename='/'>
+  <Router>
       <GlobalStyle/>
       <Navbar/>
       <Routes>
-        <Route path="/" element = {<Home/>}/>
-        <Route path="/Contact" element = {<Contact/>}/>
+        <Route path="/portfolio-page" element = {<Home/>}/>
+        <Route path="/portfolio-page/Contact" element = {<Contact/>}/>
       </Routes>
       <Footer/>
   </Router> 

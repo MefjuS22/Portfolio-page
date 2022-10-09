@@ -11,7 +11,7 @@ function Footer() {
             <FooterColumn>
             <FooterAddress>
                 Mateusz Smyda<br></br>
-                30-389 Kraków <br></br>
+                Kraków <br></br>
                 Polska
             </FooterAddress>
             <Row align='center' margin='auto 0 0 0' gap="1rem">
@@ -31,13 +31,13 @@ function Footer() {
 
             <FooterLinkItems>
                 <FooterLinkTitle>Menu</FooterLinkTitle>
-                <FooterLink to={'/'}>Home</FooterLink>
-                <FooterLink to={'/Contact'}>Contact</FooterLink>
+                <FooterLink to={'/portfolio-page/'} onClick={()=>window.scrollTo(0, 0)}>Home</FooterLink>
+                <FooterLink to={'/portfolio-page/Contact'} onClick={()=>window.scrollTo(0, 0)}>Contact</FooterLink>
                 </FooterLinkItems>
             </FooterColumn>
             </FooterGrid>
                     <FooterRights>
-                        Mateusz Smyda © 2022
+                        Mateusz Smyda 2022
                     </FooterRights>
         </FooterWrapper>
     </Section>

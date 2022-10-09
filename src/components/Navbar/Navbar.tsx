@@ -15,9 +15,13 @@ import { data } from "../../data/NavbarData";
 
 function Navbar() {
   const [show, setShow] = useState(false);
+  const [scroll, setScroll] = useState(false);
   let navigate = useNavigate();
   let location = useLocation();
 
+  const windowScrolled = () =>{
+    (window.scrollY >= 200) ? setScroll(scroll => true) : setScroll(scroll => false)
+  }
   const handleClick = () => {
     setShow(!show);
   };
@@ -39,10 +43,16 @@ function Navbar() {
     setShow(show => false)
   };
 
+  useEffect(() => {
+    windowScrolled()
+    window.addEventListener("scroll", windowScrolled)
+  },[])
+  
+
 
   return (
     <IconContext.Provider value={{ color: "#fff" }}>
-      <Nav>
+      <Nav scroll={scroll}>
         <NavbarContainer>
           <MobileIcon onClick={handleClick}>
             {show ? <FaTimes /> : <MdMenu />}
@@ -51,7 +61,7 @@ function Navbar() {
             {data.map((el, index) => (
               <NavItem key={index}>
                 <NavLinks onClick={() => {
-                  
+                  window.scrollTo(0, 0)
                   closeMobileMenu(el.to, el.id)
                   }}>
                   {el.text}

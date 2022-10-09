@@ -7,7 +7,7 @@ export const heroOne = {
 		text: '',
 	},
 	headline: "About Me",
-	description: 'I am 20 year old Front-End Developer working in React with Typescript with ambition to become a Full-Stack Developer :)',
+	description: 'I am a 20 year old Front-End Developer working in React with TypeScript with ambition to become a Full-Stack Developer :)',
 	buttonLabel: 'Download CV',
     onClick: () => {
         let alink = document.createElement('a');
@@ -41,7 +41,7 @@ export const heroThree = {
 	},
 	headline: 'My Projects',
 	description:
-		"Below you can check some of the projects I've been working on or if you want you can check source code of this website!",
+		"Below you can check some of the projects I've been working on or if you want you can check the source code of this website!",
 	buttonLabel: 'View Code',
     onClick: ()=>{
         window.open('https://github.com/MefjuS22/portfolio-page/tree/master')

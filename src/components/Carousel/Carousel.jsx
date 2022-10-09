@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { data, sliderSettings } from "../../data/CarouselData";
 import { Row, Heading, Section, TextWrapper } from "../../globalStyles";
@@ -10,6 +10,7 @@ import {
   CarouselImage,
   CardButton,
 } from "./CarouselStyles";
+import { ContentButton } from "../Content/ContentStyles";
 
 function Carousel() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -22,8 +23,8 @@ function Carousel() {
         </Heading>
         <ButtonContainer>
           <IconContext.Provider value={{ size: "3rem", color: "#003554" }}>
-            <MdArrowBackIos onClick={sliderRef?.slickPrev} />
-            <MdArrowForwardIos onClick={sliderRef?.slickNext} />
+            <FaArrowLeft onClick={sliderRef?.slickPrev} />
+            <FaArrowRight onClick={sliderRef?.slickNext} />
           </IconContext.Provider>
         </ButtonContainer>
       </Row>
@@ -38,7 +39,9 @@ function Carousel() {
             <TextWrapper size="0.9rem" margin="0.7rem" color="#4f4f4f">
               {el.description}
             </TextWrapper>
-            <CardButton onClick={el.onClick}>Check repository</CardButton>
+            <ContentButton inverse onClick={el.onClick}>
+              Check repository
+            </ContentButton>
           </ImageWrapper>
         ))}
       </ReviewSlider>

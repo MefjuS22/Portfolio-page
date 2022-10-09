@@ -1,11 +1,11 @@
 export const data = [
 	{
-		to: '/',
+		to: '/portfolio-page/',
 		text: 'Home',
 		id: 'home',
 	},
 	{
-		to: '/contact',
+		to: '/portfolio-page/contact',
 		text: 'Contact',
 	},
 ];

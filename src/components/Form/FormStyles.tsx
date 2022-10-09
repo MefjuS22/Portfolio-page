@@ -4,13 +4,17 @@ import { motion } from 'framer-motion';
 interface Props{
     start?: boolean,
     inverse?: boolean,
-    error?: string,
+    error?: boolean,
 
 }
 
 export const FormSection = styled.div<Props>`	
 	padding: 160px 0;
 	background: #006494;
+	
+	@media screen and (min-height: 1000px){
+		height: 100vh;
+	}
 `;
 
 export const FormTitle = styled.h1`
@@ -22,6 +26,7 @@ export const FormTitle = styled.h1`
 
 export const FormContainer = styled.div`
 	display: flex;
+	
 `;
 export const FormColumn = styled.div`
 	padding: 50px;
@@ -57,6 +62,7 @@ export const FormRow = styled.div`
 export const FormWrapper = styled.form`
 	padding-top: 0;
 	width: 100%;
+	
 `;
 
 export const FormMessage = styled(motion.div)<Props>`
@@ -122,24 +128,44 @@ export const FormImg = styled.img`
 	max-height: 500px;
 `;
 
-export const FormButton = styled.button`
+export const FormButton = styled(motion.button)`
+	height: 4rem;
 	border-radius: 4px;
 	background: none;
 	margin-top: 1.5rem;
 	white-space: nowrap;
-	/* color: #fff; */
+	color: #003554;
 	outline: none;
 	width: 100%;
 	font-size: 1.4rem;
-	padding: 5px 15px;
-	border: 2px solid black;
+	font-weight: 700;
+	padding: 10px 20px;
+	border: 2px solid #003554;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 
+	&:before {
+		background: #003554;
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		transition: all 0.6s ease;
+		width: 100%;
+		height: 0%;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	&:hover:before {
+		height: 500%;
+	}
+	
 	&:hover {
 		color: white;
 		transition: background-color 0.4s ease-in;
-		background-color: black;
+		background-color: #003554;
 	}
 `;

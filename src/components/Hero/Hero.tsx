@@ -18,10 +18,10 @@ const Hero = () => {
           My name is Mateusz and I am a Front-End Developer
         </MainHeading>
         <HeroText>
-          I code in ReactJS with TypeScript and Styled Compontns
+          I code in ReactJS with TypeScript and Styled Components
         </HeroText>
         <ButtonWrapper>
-          <Link to="contact">
+          <Link to="./Contact">
             <Button>Contact me!</Button>
           </Link>
           <HeroButton onClick={()=> window.scrollTo({top: window.innerHeight, behavior:"smooth"})}>Learn more</HeroButton>

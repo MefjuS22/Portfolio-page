@@ -22,8 +22,7 @@ const Form = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-
-  const form = useRef();
+  const form = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -59,7 +58,7 @@ const Form = () => {
     <FormSection>
       <Container>
         <FormRow>
-          <FormColumn small>
+          <FormColumn>
             <FormTitle>Contact</FormTitle>
             <FormWrapper ref={form} onSubmit={handleSubmit}>
               <FormInputRow>

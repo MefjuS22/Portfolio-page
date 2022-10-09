@@ -10,7 +10,7 @@ export const data = [
 	},
 	{
 		title: 'This portfolio website ',
-		description: "My private portfolio website with responsive design. Lists all of my most important features and also is beautiful, isn't it?",
+		description: "My private portfolio website with responsive design made in React with TypeScript, Styled Components and react-motion. Lists all of my most important features and also is beautiful, isn't it?",
 		image: require('../components/Carousel/portfolio-page.png'),
         onClick: ()=>{
             window.open('https://github.com/MefjuS22/portfolio-page/tree/master')
@@ -27,7 +27,7 @@ export const data = [
 	},
 	{
 		title: 'This portfolio website ',
-		description: "My private portfolio website with responsive design. Lists all of my most important features and also is beautiful, isn't it?",
+		description: "My private portfolio website with responsive design made in React with TypeScript, Styled Components and react-motion. Lists all of my most important features and also is beautiful, isn't it?",
 		image: require('../components/Carousel/portfolio-page.png'),
         onClick: ()=>{
             window.open('https://github.com/MefjuS22/portfolio-page/tree/master')
