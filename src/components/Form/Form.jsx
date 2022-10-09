@@ -67,18 +67,21 @@ const Form = () => {
                   type="text"
                   name="name"
                   placeholder={`Enter your name`}
+                  value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
                 <FormLabel>Email</FormLabel>
                 <FormInput
                   type="email"
                   name="email"
+                  value={email}
                   placeholder={`Enter your e-mail adress`}
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <FormLabel>Message</FormLabel>
                 <FormTextArea
                   name="message"
+                  value={message}
                   placeholder="Enter your message"
                   onChange={(e) => setMessage(e.target.value)}
                 ></FormTextArea>

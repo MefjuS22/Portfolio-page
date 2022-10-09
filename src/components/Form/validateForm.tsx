@@ -8,7 +8,7 @@ export default function validateForm({ name, email}: {name: string; email: strin
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!email) {
     return "Email required";
-  } else if (regex.test(email.toLowerCase())) {
+  } else if (!regex.test(email.toLocaleLowerCase())) {
     return "Email address is invalid";
   }
   return null;
