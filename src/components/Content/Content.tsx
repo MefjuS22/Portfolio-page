@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Container, Section } from "../../globalStyles";
+import React, { useEffect } from 'react';
+import { Container, Section } from '../../globalStyles';
 import {
   ContentRow,
   ContentButton,
@@ -10,28 +10,26 @@ import {
   Subtitle,
   Img,
   ImgWrapper,
-} from "./ContentStyles";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
-
-
+} from './ContentStyles';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 const initial = {
   opacity: 0,
   y: 30,
 };
 
-interface types{
-  topLine?: any,
-  headline?: string,
-  description?: string,
-  buttonLabel?: string,
-  img: string,
-  alt?: string,
-  inverse?: boolean,
-  reverse?: boolean,
-  linkTo?: string,
-  onClick?: any,
+interface types {
+  topLine?: any;
+  headline?: string;
+  description?: string;
+  buttonLabel?: string;
+  img: string;
+  alt?: string;
+  inverse?: boolean;
+  reverse?: boolean;
+  linkTo?: string;
+  onClick?: any;
 }
 function Content({
   topLine,
@@ -80,20 +78,23 @@ function Content({
                 initial={initial}
                 transition={{ delay: 0.7, duration: 0.6 }}
                 animate={animation}
-                inverse={inverse}
+                inverse
               >
                 {description}
               </Subtitle>
-              {buttonLabel ? <ContentButton
-                initial={initial}
-                transition={{ delay: 1, duration: 0.6 }}
-                animate={animation}
-                inverse
-                onClick={onClick}
-              >
-                {buttonLabel}
-              </ContentButton> : <></>}
-              
+              {buttonLabel ? (
+                <ContentButton
+                  initial={initial}
+                  transition={{ delay: 1, duration: 0.6 }}
+                  animate={animation}
+                  inverse
+                  onClick={onClick}
+                >
+                  {buttonLabel}
+                </ContentButton>
+              ) : (
+                <></>
+              )}
             </TextWrapper>
           </ContentColumn>
           <ContentColumn
@@ -103,7 +104,6 @@ function Content({
           >
             <ImgWrapper>
               <Img
-                
                 src={img}
                 alt={alt}
                 whileHover={{ rotate: 3, scale: 1.02 }}

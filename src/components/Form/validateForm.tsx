@@ -1,5 +1,10 @@
-
-export default function validateForm({ name, email}: {name: string; email: string}) {
+export default function validateForm({
+  name,
+  email,
+}: {
+  name: string;
+  email: string;
+}) {
   if (!name.trim()) {
     return "Username required";
   }

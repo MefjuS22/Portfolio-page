@@ -1,16 +1,15 @@
-import React, { useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { IconContext } from "react-icons";
-import { data, sliderSettings } from "../../data/CarouselData";
-import { Row, Heading, Section, TextWrapper } from "../../globalStyles";
+import React, { useState } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
+import { data, sliderSettings } from '../../data/CarouselData';
+import { Row, Heading, Section, TextWrapper } from '../../globalStyles';
 import {
   ButtonContainer,
   ReviewSlider,
   ImageWrapper,
   CarouselImage,
-  CardButton,
-} from "./CarouselStyles";
-import { ContentButton } from "../Content/ContentStyles";
+} from './CarouselStyles';
+import { ContentButton } from '../Content/ContentStyles';
 
 function Carousel() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -22,7 +21,7 @@ function Carousel() {
           My Projects
         </Heading>
         <ButtonContainer>
-          <IconContext.Provider value={{ size: "3rem", color: "#003554" }}>
+          <IconContext.Provider value={{ size: '3rem', color: '#003554' }}>
             <FaArrowLeft onClick={sliderRef?.slickPrev} />
             <FaArrowRight onClick={sliderRef?.slickNext} />
           </IconContext.Provider>
