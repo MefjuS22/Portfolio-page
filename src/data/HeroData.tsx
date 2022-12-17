@@ -15,7 +15,7 @@ export const heroOne = {
     alink.click();
   },
   imgStart: 'start',
-  img: '../components/Content/about_me.svg',
+  img: './assets/about_me.svg',
   start: 'true',
 };
 export const heroFour = {
@@ -29,26 +29,26 @@ export const heroFour = {
     'I currently work as Vue.js Front-end developer at ONX Center based in Cracow',
 
   imgStart: 'start',
-  img: '../components/Content/working.svg',
+  img: './assets/working.svg',
   start: 'true',
 };
 
 export const heroTwo = {
-  reverse: false,
-  inverse: false,
+  reverse: true,
+  inverse: true,
   topLine: {
     text: 'Education',
   },
   headline: 'I study Computer Science at WSB-NLU University since 2022',
   description: '',
   imgStart: 'start',
-  img: '../components/Content/education.svg',
+  img: './assets/education.svg',
   start: 'true',
 };
 
 export const heroThree = {
-  reverse: true,
-  inverse: true,
+  reverse: false,
+  inverse: false,
   topLine: {
     text: 'Check my work',
   },
@@ -60,6 +60,6 @@ export const heroThree = {
     window.open('https://github.com/MefjuS22/portfolio-page/tree/master');
   },
   imgStart: '',
-  img: '../components/Content/projects.svg',
+  img: './assets/projects.svg',
   start: 'true',
 };
