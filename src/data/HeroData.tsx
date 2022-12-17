@@ -6,7 +6,7 @@ export const heroOne = {
   },
   headline: 'About Me',
   description:
-    'I am a 20 year old Front-End Developer working in React with TypeScript with ambition to become a Full-Stack Developer :)',
+    'I am a 20 year old Front-End Developer working in React with TypeScript',
   buttonLabel: 'Download CV',
   onClick: () => {
     const alink = document.createElement('a');
@@ -15,7 +15,21 @@ export const heroOne = {
     alink.click();
   },
   imgStart: 'start',
-  img: require('../components/Content/programmer.png'),
+  img: '../components/Content/about_me.svg',
+  start: 'true',
+};
+export const heroFour = {
+  reverse: false,
+  inverse: false,
+  topLine: {
+    text: 'Experience',
+  },
+  headline: 'Work Experience',
+  description:
+    'I currently work as Vue.js Front-end developer at ONX Center based in Cracow',
+
+  imgStart: 'start',
+  img: '../components/Content/working.svg',
   start: 'true',
 };
 
@@ -28,7 +42,7 @@ export const heroTwo = {
   headline: 'I study Computer Science at WSB-NLU University since 2022',
   description: '',
   imgStart: 'start',
-  img: require('../components/Content/school.png'),
+  img: '../components/Content/education.svg',
   start: 'true',
 };
 
@@ -46,6 +60,6 @@ export const heroThree = {
     window.open('https://github.com/MefjuS22/portfolio-page/tree/master');
   },
   imgStart: '',
-  img: require('../components/Content/clipboard.png'),
+  img: '../components/Content/projects.svg',
   start: 'true',
 };

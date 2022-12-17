@@ -1,38 +1,38 @@
-import React from "react";
+import React from 'react';
 
-import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiStyledcomponents } from "react-icons/si";
+import { FaReact, FaHtml5, FaCss3Alt, FaVuejs, FaSass } from 'react-icons/fa';
+import { SiTypescript, SiJavascript, SiStyledcomponents } from 'react-icons/si';
 const iconStyle = (Icon: any) => <Icon size="3rem" color="#0f0f0f" />;
 
 export const featuresData = [
   {
-    name: "React",
+    name: 'React',
     icon: iconStyle(FaReact),
-    imgClass: "one",
+    imgClass: 'one',
   },
   {
-    name: "JavaScript",
+    name: 'Vue.js',
+    icon: iconStyle(FaVuejs),
+    imgClass: 'two',
+  },
+  {
+    name: 'JavaScript',
     icon: iconStyle(SiJavascript),
-    imgClass: "two",
+    imgClass: 'three',
   },
   {
-    name: "TypeScript",
+    name: 'TypeScript',
     icon: iconStyle(SiTypescript),
-    imgClass: "three",
+    imgClass: 'four',
   },
   {
-    name: "HTML 5",
-    icon: iconStyle(FaHtml5),
-    imgClass: "four",
+    name: 'Sass',
+    icon: iconStyle(FaSass),
+    imgClass: 'six',
   },
   {
-    name: "CSS",
-    icon: iconStyle(FaCss3Alt),
-    imgClass: "five",
-  },
-  {
-    name: "Styled Components",
+    name: 'Styled Components',
     icon: iconStyle(SiStyledcomponents),
-    imgClass: "six",
+    imgClass: 'seven',
   },
 ];
