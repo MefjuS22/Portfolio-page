@@ -26,7 +26,7 @@ export const heroFour = {
   },
   headline: 'Work Experience',
   description:
-    'I currently work as Vue.js Front-end developer at ONX Center based in Cracow',
+    'I currently work as React Front-end developer at GOONLINE using mainly React, TypeScript and MobX',
 
   imgStart: 'start',
   img: './assets/working.svg',
