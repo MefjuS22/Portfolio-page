@@ -12,13 +12,13 @@ export const CarouselImage = styled.img`
 export const ImageWrapper = styled.div`
   width: 90%;
   display: flex !important;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
   outline: none;
-  height: 450px;
+  height: 470px;
   @media screen and (min-width: 440px) {
     border: 1px solid #bebebe;
   }

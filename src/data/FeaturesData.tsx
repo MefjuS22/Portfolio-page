@@ -1,8 +1,8 @@
-import React from 'react';
+import { IconType } from 'react-icons';
 
-import { FaReact, FaHtml5, FaCss3Alt, FaVuejs, FaSass } from 'react-icons/fa';
+import { FaReact, FaVuejs, FaSass } from 'react-icons/fa';
 import { SiTypescript, SiJavascript, SiStyledcomponents } from 'react-icons/si';
-const iconStyle = (Icon: any) => <Icon size="3rem" color="#0f0f0f" />;
+const iconStyle = (Icon: IconType) => <Icon size="3rem" color="#0f0f0f" />;
 
 export const featuresData = [
   {
