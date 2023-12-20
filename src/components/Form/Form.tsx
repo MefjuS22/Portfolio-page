@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import {
   FormColumn,
@@ -24,19 +24,19 @@ const Form = () => {
   const [success, setSuccess] = useState("");
   const form = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const resultError = validateForm({ name, email });
+
+    if (!form.current){
+      return 
+    }
 
     if (resultError !== null) {
       setError(resultError);
       return;
     }
-    setName("");
-    setEmail("");
-    setError("");
-    setMessage("");
-    setSuccess("Email sent!");
+
     emailjs
       .sendForm(
         "service_zqiz893",
@@ -47,12 +47,37 @@ const Form = () => {
       .then((error) => {
         console.log(error.text);
       });
+      setName("");
+      setEmail("");
+      setError("");
+      setMessage("");
+      setSuccess("Email sent!");
   };
 
   const messageVariants = {
     hidden: { y: 30, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
   };
+
+  const errorMessage = error && (
+    <FormMessage
+      variants={messageVariants}
+      initial="hidden"
+      animate="animate"
+      error
+    >
+      {error}
+    </FormMessage>
+  )
+  const successMessage = success && (
+    <FormMessage
+      variants={messageVariants}
+      initial="hidden"
+      animate="animate"
+    >
+      {success}
+    </FormMessage>
+  )
 
   return (
     <FormSection>
@@ -88,25 +113,8 @@ const Form = () => {
               </FormInputRow>
               <FormButton type="submit">Send Email</FormButton>
             </FormWrapper>
-            {error && (
-              <FormMessage
-                variants={messageVariants}
-                initial="hidden"
-                animate="animate"
-                error
-              >
-                {error}
-              </FormMessage>
-            )}
-            {success && (
-              <FormMessage
-                variants={messageVariants}
-                initial="hidden"
-                animate="animate"
-              >
-                {success}
-              </FormMessage>
-            )}
+            {errorMessage}
+            {successMessage}
           </FormColumn>
         </FormRow>
       </Container>

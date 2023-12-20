@@ -1,7 +1,7 @@
-import React from "react";
+import { IconType } from "react-icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const iconStyle = (Icon: any) => <Icon />;
+const iconStyle = (Icon: IconType) => <Icon />;
 
 export const footerSocialData = [
   {

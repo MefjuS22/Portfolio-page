@@ -41,7 +41,7 @@ function Navbar() {
       scrollTo(id);
     }
     navigate(to);
-    setShow((show) => false);
+    setShow(false);
   };
 
   useEffect(() => {
@@ -49,26 +49,30 @@ function Navbar() {
     window.addEventListener('scroll', windowScrolled);
   }, []);
 
+  const navLinks = data.map((el, index) => (
+    <NavItem key={index}>
+      <NavLinks
+        onClick={() => {
+          window.scrollTo(0, 0);
+          closeMobileMenu(el.to, el.id);
+        }}
+      >
+        {el.text}
+      </NavLinks>
+    </NavItem>
+  ))
+
+  const menuButton = show ? <FaTimes /> : <MdMenu />
+
   return (
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav scroll={scroll}>
         <NavbarContainer>
           <MobileIcon onClick={handleClick}>
-            {show ? <FaTimes /> : <MdMenu />}
+            {menuButton}
           </MobileIcon>
           <NavMenu show={show}>
-            {data.map((el, index) => (
-              <NavItem key={index}>
-                <NavLinks
-                  onClick={() => {
-                    window.scrollTo(0, 0);
-                    closeMobileMenu(el.to, el.id);
-                  }}
-                >
-                  {el.text}
-                </NavLinks>
-              </NavItem>
-            ))}
+            {navLinks}
           </NavMenu>
         </NavbarContainer>
       </Nav>

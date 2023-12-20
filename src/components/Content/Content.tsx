@@ -20,7 +20,9 @@ const initial = {
 };
 
 interface types {
-  topLine?: any;
+  topLine?: {
+    text: string;
+  };
   headline?: string;
   description?: string;
   buttonLabel?: string;
@@ -29,7 +31,7 @@ interface types {
   inverse?: boolean;
   reverse?: boolean;
   linkTo?: string;
-  onClick?: any;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 function Content({
   topLine,
@@ -53,6 +55,18 @@ function Content({
     }
   }, [inView, animation]);
 
+ const button = buttonLabel && (
+  <ContentButton
+    initial={initial}
+    transition={{ delay: 1, duration: 0.6 }}
+    animate={animation}
+    inverse={inverse}
+    onClick={onClick}
+  >
+    {buttonLabel}
+  </ContentButton>
+)
+
   return (
     <Section inverse={inverse} ref={ref}>
       <Container>
@@ -64,7 +78,7 @@ function Content({
                 transition={{ delay: 0.3, duration: 0.6 }}
                 animate={animation}
               >
-                {topLine.text}
+                {topLine?.text}
               </TopLine>
               <Heading
                 initial={initial}
@@ -82,19 +96,7 @@ function Content({
               >
                 {description}
               </Subtitle>
-              {buttonLabel ? (
-                <ContentButton
-                  initial={initial}
-                  transition={{ delay: 1, duration: 0.6 }}
-                  animate={animation}
-                  inverse={inverse}
-                  onClick={onClick}
-                >
-                  {buttonLabel}
-                </ContentButton>
-              ) : (
-                <></>
-              )}
+              {button}
             </TextWrapper>
           </ContentColumn>
           <ContentColumn
