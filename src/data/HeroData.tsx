@@ -6,7 +6,7 @@ export const heroOne = {
   },
   headline: 'About Me',
   description:
-    'I am a 20 year old Front-End Developer working in React with TypeScript',
+    'I am a 22 year old Front-End Developer working in React with TypeScript',
   buttonLabel: 'Download CV',
   onClick: () => {
     const alink = document.createElement('a');
@@ -26,7 +26,7 @@ export const heroFour = {
   },
   headline: 'Work Experience',
   description:
-    'I currently work as React Front-end developer at GOONLINE using mainly React, TypeScript and MobX',
+    'I currently work as a FullStack Developer at Codibly',
 
   imgStart: 'start',
   img: './assets/working.svg',
