@@ -6,7 +6,7 @@ export const heroOne = {
   },
   headline: 'About Me',
   description:
-    'I am a 22 year old Front-End Developer working in React with TypeScript',
+    'I am a 22 year old FullStack Engineer working in React with TypeScript, and Java with Spring Boot',
   buttonLabel: 'Download CV',
   onClick: () => {
     const alink = document.createElement('a');
